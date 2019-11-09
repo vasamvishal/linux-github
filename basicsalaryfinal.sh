@@ -1,5 +1,6 @@
 #!/bin/bash -x
 rate_hours=20;
+#abc
 hour=0; 
 random=$((RANDOM%3))
 echo $random
