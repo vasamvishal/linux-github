@@ -1,6 +1,6 @@
 #!/bin/bash -x
 rate_hours=20;
-
+#abcd55555555555555555
 random=$((RANDOM%3))
 echo $random
 if [ $random == 1 ]
