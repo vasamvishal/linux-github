@@ -20,9 +20,9 @@ do
 
     if [ $temp -le 50 ]
      then
-      $day++;
-       echo $temp
-     elif[ $day -ge 21]
+      day=$(( $day+1 ));
+       echo $day
+     elif [ $day -ge 21 ]
          then
           break; 
        else
