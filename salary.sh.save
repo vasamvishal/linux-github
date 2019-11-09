@@ -1,0 +1,23 @@
+#!/bin/bash -x 
+a=$((RANDOM%3))
+echo $a
+if [ $a == 1 ]
+   then
+    echo "present"
+     =20;
+     y=8;
+z=$(( $x * $y ))
+echo "Salary" $z
+  
+elif [ $a == 2 ]
+then
+x=10;
+y=4;
+z=$(( $x * $y ))
+echo "Salary for part time "$z
+
+else
+echo "not present"
+z=0
+echo "salary is"$z
+fi

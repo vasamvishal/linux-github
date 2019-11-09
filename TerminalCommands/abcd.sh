@@ -1,0 +1,13 @@
+/bash 
+for file in `ls *.txt`;
+do
+folderName=`echo $file|awk -F'.' '{print $1}'`;
+date_stamp=$(date +"%d-%m-%y");
+echo $folderName;
+if [ -d $folderName ];
+then 
+rm -r $folderName
+fi
+mkdir $folderName$date_stamp;
+cp $file $folderName;
+done
