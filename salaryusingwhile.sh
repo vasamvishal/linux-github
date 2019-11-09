@@ -4,7 +4,8 @@ isfulltime=2;
 valid=true;
 temp=0;
 rate_hour=30;
-while [ $valid ]
+day=1;
+while [ $day -le 21 ]
 do 
    random=$((RANDOM%3))
    case $random in $isparttime)
@@ -19,7 +20,11 @@ do
 
     if [ $temp -le 50 ]
      then
-       echo $temp 
+      $day++;
+       echo $temp
+     elif[ $day -ge 21]
+         then
+          break; 
        else
         break; 
      
