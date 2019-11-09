@@ -1,15 +1,15 @@
 #!/bin/bash -x
 rate_hours=20;
-#abcd55555555555555555
-random=$((RANDOM%3))
+
+
+hour=0; 
 echo $random
 if [ $random == 1 ]
 then
          emprate=20;
          empHrs=8;
          salary=$(( $emprate * $empHrs ))
-         echo $salary
-         echo "nothing"
+        
         echo "present"
 
 else
