@@ -10,7 +10,7 @@ then
          salary=$(( $emprate * $empHrs ))
          echo $salary
          echo "nothing"
-        echo "present"
+       
 
 else
         echo "not present"
