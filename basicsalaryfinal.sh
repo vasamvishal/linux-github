@@ -9,6 +9,7 @@ then
          empHrs=8;
          salary=$(( $emprate * $empHrs ))
          echo $salary
+         echo "nothing"
         echo "present"
 
 else
