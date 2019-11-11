@@ -1,4 +1,5 @@
 #!/bin/bash -x
+
 rate_hours=20;
 #abcjjjjjjjjjjjjjjjjjjjj
 hour=0; 
@@ -10,13 +11,12 @@ then
          emprate=20;
          empHrs=8;
          salary=$(( $emprate * $empHrs ))
-        
         echo "present"
-
+         echo $salary
+         echo "nothing"
 else
         echo "not present"
 fi
-
 
 
 
