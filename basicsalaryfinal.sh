@@ -1,40 +1,39 @@
 #!/bin/bash -x
-rate_hours=20;
 
+isFullTime=1;
+isPartTime=2;
+empRateHrs=20;
+counter=0;
+function hours() {
+   # echo $1
+    case $1 in
+        $isFullTime)
+        empHrs=8;;
+        $isPartTime)
+        empHrs=4;;
+        *)
+        empHrs=0;;
+    esac
+    echo $empHrs
 
-hour=0; 
-echo $random
-if [ $random == 1 ]
-then
-        echo "present"
+}
+function wage(){
+        TotalWage=$(( $1*$empRateHrs ))
+	echo $TotalWage
+       #	Wages[((counter++))]=$TotalHrs;
+	#echo ${Wages[@]}
+}
 
-else
-        echo "not present"
+for (( counter=1; counter<=5; counter++ ))
+do
+    iresult="$( hours $(( RANDOM%3 )) )"
+     #echo $iresult
+     wages="$( wage $(( $iresult )) )"
+     TotalWages=$(( $TotalWages+$wages ))
+      Wages[((counter++))]=$wages
+        
 
-
-
-
-
-
-
-
-#!/bin/bash -x
-rate_hours=20;
- 
-ispartTime=2;
-isfulltime=1;
-random=$((RANDOM%3))
-case $random in $isfulltime )
-
-
-        hour=8;;
-                 $ispartTime)
-
-        hour=4;;
-                  * )
-        hour=0;
-
-esac
-        salary=$(( $rate_hours * $hour ))
-
-
+done
+ Wages[((counter++))]=$Totalwages
+echo ${Wages[@]}
+echo $Totalwages
